@@ -1,0 +1,81 @@
+@import 'vars';
+@import 'mixins';
+
+.grid-home {
+
+  @media screen and (min-width: 760px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+    grid-template-areas:
+      "banner banner hrs"
+      "banner banner about"
+      "menu   orders about";
+  }
+
+  .about  { grid-area: about; }
+  .banner { grid-area: banner; }
+  .hrs    { grid-area: hrs; }
+  .menu   { grid-area: menu; }
+  .orders { grid-area: orders; }
+}
+
+.grid-info {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+
+.grid-order-form {
+
+  li,
+  .grid-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 12px;
+
+    &.input,
+    &.textarea {
+      grid-template-areas:
+        "label label"
+        "field field";
+
+      label    { grid-area: label; }
+      input,
+      textarea { grid-area: field; }
+    }
+
+    &.radios {
+      grid-template-areas:
+        "label label"
+        "r1    r2";
+
+      .label               { grid-area: label; }
+      label:nth-of-type(1) { grid-area: r1; }
+      label:nth-of-type(2) { grid-area: r2; }
+    }
+
+    input[type="submit"] { margin-left: 0; }
+  }
+
+  @media screen and (min-width: 600px) {
+    width: 600px;
+    margin: 0 auto;
+
+    label,
+    .label {
+      margin-top: 7px;
+      margin-right: 50px;
+      text-align: right;
+    }
+
+    li,
+    .grid-item {
+      margin-bottom: 25px;
+      grid-template-columns: 4fr 3fr 3fr 2fr;
+
+      &.input    { grid-template-areas: "label field field ."; }
+      &.radios   { grid-template-areas: "label r1    r2    ."; }
+      &.textarea { grid-template-areas: "label field field field"; }
+    }
+  }
+}

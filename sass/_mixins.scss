@@ -1,0 +1,12 @@
+@import 'vars';
+
+@mixin flex-on() {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+@mixin font-setup($font-size, $line-height, $weight) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $weight;
+}
