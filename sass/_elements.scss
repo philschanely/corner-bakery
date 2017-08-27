@@ -1,0 +1,102 @@
+@import 'mixins';
+
+a {
+  color: $color-accent;
+  font-weight: 400;
+  text-decoration: none;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 62.5%;
+  color: $color-body;
+  width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  body {
+    margin: 0 auto;
+    width: 1200px;
+  }
+}
+dd {
+  @include font-setup(1.6em, 1.5625em, 300);
+  margin-bottom: 12px;
+}
+dt {
+  @include font-setup(1.6em, 1.5625em, 300);
+  margin-bottom: 12px;
+}
+footer {
+  margin: 25px;
+  border-top: 2px solid #5C7C4B;
+  padding: 20px 0 0;
+}
+footer p {
+  text-align: center;
+}
+@media screen and (min-width: 600px) {
+  footer {
+    width: 550px;
+    margin: 0 auto;
+  }
+}
+
+h1 {
+  text-align: center;
+}
+h2 {
+  font-family: "Teko", sans-serif;
+  font-size: 4.3em;
+  font-weight: 500;
+  text-align: center;
+  color: #5C7C4B;
+  text-transform: lowercase;
+  border-bottom: 2px solid #5C7C4B;
+  margin: 25px 0;
+  padding-bottom: 13px;
+}
+h2 a {
+  color: #5C7C4B;
+}
+header {
+  padding: 65px 25px 10px;
+}
+
+img {
+  max-width: 100%;
+}
+
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+input[type="text"],
+textarea {
+  padding: 5px;
+  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  color: $color-body;
+  border: 1px solid $color-body;
+}
+label,
+.label {
+  margin-top: 7px;
+  margin-bottom: 5px;
+  display: block;
+}
+li {
+  @include font-setup(1.6em, 1.5625em, 300);
+}
+main {
+  box-sizing: border-box;
+  padding: 25px;
+}
+p {
+  @include font-setup(1.6em, 1.5625em, 300);
+  margin-bottom: 25px;
+}
+
+strong {
+  font-style: italic;
+  font-weight: 600;
+  color: #C2762E;
+}

@@ -1,0 +1,122 @@
+@media screen and (min-width: 760px) {
+  .grid-home {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+    grid-template-areas: "banner banner hrs" "banner banner about" "menu   orders about";
+  }
+}
+.grid-home .about {
+  grid-area: about;
+}
+.grid-home .banner {
+  grid-area: banner;
+}
+.grid-home .hrs {
+  grid-area: hrs;
+}
+.grid-home .menu {
+  grid-area: menu;
+}
+.grid-home .orders {
+  grid-area: orders;
+}
+.grid-info {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+.grid-item {
+  font-size: 1em;
+}
+.grid-item input {
+  display: block;
+  background-color: $color-accent;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 15px 25px;
+  width: 250px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6em;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+  border: none;
+  outline: none;
+}
+.grid-order-form li,
+.grid-order-form .grid-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 12px;
+}
+.grid-order-form li.input,
+.grid-order-form .grid-item.input,
+.grid-order-form li.textarea,
+.grid-order-form .grid-item.textarea {
+  grid-template-areas: "label label" "field field";
+}
+.grid-order-form li.input label,
+.grid-order-form .grid-item.input label,
+.grid-order-form li.textarea label,
+.grid-order-form .grid-item.textarea label {
+  grid-area: label;
+}
+.grid-order-form li.input input,
+.grid-order-form .grid-item.input input,
+.grid-order-form li.textarea input,
+.grid-order-form .grid-item.textarea input,
+.grid-order-form li.input textarea,
+.grid-order-form .grid-item.input textarea,
+.grid-order-form li.textarea textarea,
+.grid-order-form .grid-item.textarea textarea {
+  grid-area: field;
+}
+.grid-order-form li.radios,
+.grid-order-form .grid-item.radios {
+  grid-template-areas: "label label" "r1 r2";
+}
+.grid-order-form li.radios .label,
+.grid-order-form .grid-item.radios .label {
+  grid-area: label;
+}
+.grid-order-form li.radios label:nth-of-type(1),
+.grid-order-form .grid-item.radios label:nth-of-type(1) {
+  grid-area: r1;
+}
+.grid-order-form li.radios label:nth-of-type(2),
+.grid-order-form .grid-item.radios label:nth-of-type(2) {
+  grid-area: r2;
+}
+.grid-order-form li input[type="submit"],
+.grid-order-form .grid-item input[type="submit"] {
+  margin-left: 0;
+}
+@media screen and (min-width: 600px) {
+  .grid-order-form {
+    width: 600px;
+    margin: 0 auto;
+  }
+  .grid-order-form label,
+  .grid-order-form .label {
+    margin-top: 7px;
+    margin-right: 50px;
+    text-align: right;
+  }
+  .grid-order-form li,
+  .grid-order-form .grid-item {
+    margin-bottom: 25px;
+    grid-template-columns: 4fr 3fr 3fr 2fr;
+  }
+  .grid-order-form li.input,
+  .grid-order-form .grid-item.input {
+    grid-template-areas: "label field field .";
+  }
+  .grid-order-form li.radios,
+  .grid-order-form .grid-item.radios {
+    grid-template-areas: "label r1 r2 .";
+  }
+  .grid-order-form li.textarea,
+  .grid-order-form .grid-item.textarea {
+    grid-template-areas: "label field field field";
+  }
+}
