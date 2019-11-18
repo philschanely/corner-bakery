@@ -1,0 +1,32 @@
+.grid-item {
+  font-size: 1em;
+
+  input {
+    margin: 0 auto;
+    padding: 15px 25px;
+    width: 250px;
+    display: block;
+    box-sizing: border-box;
+    color: white;
+    font-family: $font-primary;
+    font-size: 1.6em;
+    font-weight: 400;
+    text-align: center;
+    background-color: $color-accent;
+    border: none;
+    outline: none;
+  }
+}
+
+.hrs {
+  margin-top: 25px;
+}
+
+.intro {
+  margin: 0 auto;
+  max-width: 550px;
+}
+
+h2 {
+  margin-top: 0;
+}

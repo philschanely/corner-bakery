@@ -1,0 +1,76 @@
+.order-form {
+  @media screen and (min-width: 650px) {
+    margin: 0 auto;
+    width: 600px;
+  }
+}
+
+.order-form__field {
+  margin-bottom: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  label,
+  .label {
+    grid-area: label;
+
+    @media screen and (min-width: 650px) {
+      margin-top: 7px;
+      margin-right: 50px;
+      text-align: right;
+    }
+  }
+
+  input,
+  textarea,
+  button {
+    grid-area: field;
+  }
+
+  @media screen and (min-width: 650px) {
+    margin-bottom: 25px;
+    grid-template-columns: 4fr 3fr 3fr 2fr;
+  }
+}
+
+.order-form__field--input {
+  grid-template-areas:
+    "label label"
+    "field field";
+
+  @media screen and (min-width: 650px) {
+    grid-template-areas: "label field field .";
+  }
+}
+
+.order-form__field--radios {
+  grid-template-areas:
+    "label label"
+    "r1    r2";
+
+  label:nth-of-type(1) {
+    grid-area: r1;
+  }
+
+  label:nth-of-type(2) {
+    grid-area: r2;
+  }
+
+  @media screen and (min-width: 650px) {
+    grid-template-areas: "label r1 r2 .";
+  }
+}
+
+.order-form__field--textarea {
+  grid-template-areas:
+    "label label"
+    "field field";
+
+  @media screen and (min-width: 650px) {
+    grid-template-areas: "label field field field";
+  }
+}
+
+input[type="submit"] {
+  margin-left: 0;
+}
