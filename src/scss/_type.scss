@@ -1,0 +1,142 @@
+// Core type specs
+%base {
+  @include font-setup(17, 25, 300);
+
+  font-family: $font-primary;
+}
+
+%base-emphasized {
+  @include font-setup(17, 25, 600);
+
+  font-style: italic;
+}
+
+%display-2 {
+  @media (max-width: 599px) {
+    @include font-setup(37, 50, 500);
+  }
+
+  @media (min-width: 600px) {
+    @include font-setup(43, 50, 500);
+  }
+
+  font-family: $font-secondary;
+  text-transform: lowercase;
+}
+
+%display-3 {
+  @include font-setup(23, 25, 700);
+
+  font-family: $font-secondary;
+  text-transform: lowercase;
+}
+
+%display-4 {
+  @include font-setup(19, 25, 500);
+
+  font-family: $font-secondary;
+  text-transform: lowercase;
+}
+
+%label {
+  @include font-setup(17, 25, 600);
+}
+
+%nav-link {
+  @media (max-width: 599px) {
+    @include font-setup(17, 25, 300);
+  }
+
+  @media (min-width: 600px) {
+    @include font-setup(23, 25, 300);
+  }
+}
+
+%nav-link-active {
+  @media (max-width: 599px) {
+    @include font-setup(17, 25, 700);
+  }
+
+  @media (min-width: 600px) {
+    @include font-setup(23, 25, 700);
+  }
+}
+
+// Implementations
+a {
+  color: $color-accent;
+  text-decoration: none;
+}
+
+button {
+  @extend %base;
+}
+
+dd {
+  @extend %base;
+
+  color: $color-body;
+
+  &:not(:last-of-type) {
+    margin-bottom: 12px;
+  }
+}
+
+dt {
+  @extend %base;
+
+  color: $color-body;
+
+  &:not(:last-of-type) {
+    margin-bottom: 12px;
+  }
+}
+
+h2 {
+  @extend %display-2;
+
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding-bottom: 13px;
+  color: $color-primary;
+  text-align: center;
+  border-bottom: 2px solid $color-primary;
+
+  > a {
+    color: $color-primary;
+  }
+}
+
+label,
+.label {
+  @extend %label;
+}
+
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+input[type="text"],
+textarea {
+  @extend %base;
+
+  color: $color-body;
+}
+
+li {
+  @extend %base;
+
+  color: $color-body;
+}
+
+p {
+  @extend %base;
+
+  margin-bottom: 25px;
+  color: $color-body;
+}
+
+strong {
+  @extend %base-emphasized;
+
+  color: $color-secondary;
+}

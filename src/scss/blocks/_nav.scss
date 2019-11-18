@@ -1,0 +1,35 @@
+.nav__item {
+  text-align: center;
+  border-top: 3px solid transparent;
+
+  @media (max-width: 599px) {
+    margin: 0 20px;
+  }
+
+  @media (min-width: 600px) {
+    margin: 0 33px;
+  }
+}
+
+.nav__item--active {
+  border-color: $color-secondary;
+}
+
+.nav__link {
+  @extend %nav-link;
+
+  padding: 2px 5px;
+  display: block;
+  color: $color-body;
+
+  .nav__item--active & {
+    @extend %nav-link-active;
+
+    color: $color-secondary;
+  }
+}
+
+.nav__list {
+  display: flex;
+  justify-content: center;
+}

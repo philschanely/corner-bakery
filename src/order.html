@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Order | The Corner Bakery</title>
+  <meta charset="utf-8" />
+  <link type="text/css" rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <header class="masthead">
+    <h1 class="masthead__brand">
+      <a href="index.html">
+        <img class="masthead__logo" src="images/brand.png" alt="The Corner Bakery" />
+      </a>
+    </h1>
+    <nav class="masthead__nav nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="index.html">home</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="menu.html">menu</a>
+        </li>
+        <li class="nav__item nav__item--active">
+          <a class="nav__link" href="order.html">orders</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="intro">
+      <h2>Place an order</h2>
+      <p>We leave our order form intentionally open so that you can feel free
+        to request both items you’ve seen on our menu as well as request custom orders.</p>
+      <p><strong>Please allow 48 hours for us to fulfill orders.</strong></p>
+    </div>
+    <form class="order-form">
+      <ul>
+        <li class="order-form__field order-form__field--input">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" />
+        </li>
+        <li class="order-form__field order-form__field--input">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" />
+        </li>
+        <li class="order-form__field order-form__field--input">
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone" />
+        </li>
+        <li class="order-form__field order-form__field--input">
+          <label for="date">Date needed</label>
+          <input type="date" id="date" name="date" />
+        </li>
+        <li class="order-form__field order-form__field--radios">
+          <span class="label">Delivery or pickup</span>
+          <label for="delivery">
+            <input type="radio" id="delivery" name="order_type" />
+            Delivery
+          </label>
+          <label for="pickup">
+            <input type="radio" id="pickup" name="order_type" />
+            Pickup
+          </label>
+        </li>
+        <li class="order-form__field order-form__field--textarea">
+          <label for="details">Order details</label>
+          <textarea id="details" name="details">Tell us what you'd like in your order.</textarea>
+        </li>
+      </ul>
+      <p class="order-form__field order-form__field--input">
+        <button class="btn" type="submit" name="submit_order">Place order &raquo;</button>
+      </p>
+    </form>
+  </main>
+  <footer class="footer">
+    <p>Copyright &copy;2016 by The Corner Baker. All rights reserved.<br />
+      Designed by Jennifer Gammie and Phil Schanely.</p>
+  </footer>
+</body>
+
+</html>

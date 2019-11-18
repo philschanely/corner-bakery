@@ -1,0 +1,31 @@
+body {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+input[type="text"],
+textarea {
+  padding: 5px;
+  border: 1px solid $color-body;
+}
+
+label,
+.label {
+  margin-top: 7px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+main {
+  padding: 25px;
+  box-sizing: border-box;
+}

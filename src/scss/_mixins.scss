@@ -1,0 +1,18 @@
+@mixin flex() {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+@mixin font-setup($font-size, $line-height, $weight) {
+  font-size: font-size($font-size);
+  font-weight: $weight;
+  line-height: font-size($line-height);
+}
+
+@mixin position-full($offset: 0) {
+  position: absolute;
+  top: $offset;
+  right: $offset;
+  bottom: $offset;
+  left: $offset;
+}
